@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="SignupForm mt-5 container"
+  >
+    <div
+      class="col-lg-4 col-md-6"
+      ms="12"
+    >
+      <h3
+        class="log mt-3"
+      >
+        Sign Up
+      </h3>
+      <div
+        class="card-body"
+      >
+        <form>
+          <div
+            class="form-group mb-4"
+          >
+            <input
+              class="form-control"
+              name="username"
+              placeholder="Username"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group"
+          >
+            <input
+              class="form-control"
+              name="password"
+              placeholder="Password"
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group"
+          >
+            <input
+              class="form-control"
+              name="firstName"
+              placeholder="First Name"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group"
+          >
+            <input
+              class="form-control"
+              name="lastName"
+              placeholder="Last Name"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group"
+          >
+            <input
+              class="form-control"
+              name="email"
+              placeholder="Example@abc.com"
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group"
+          >
+            <input
+              class="form-control"
+              name="phone"
+              placeholder="Phone"
+              value=""
+            />
+          </div>
+          <button
+            class="btn btn-primary btn-block"
+            type="submit"
+          >
+            Signup
+          </button>
+          <div
+            class="text-center"
+          >
+            <p
+              class="mt-4"
+            >
+              Have an account?
+            </p>
+            <a
+              class="link-sign"
+              href="/login"
+            >
+              LOGIN NOW
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

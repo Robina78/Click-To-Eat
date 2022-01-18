@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Homepage container-fluid"
+  >
+    <div
+      class="wrapper"
+    >
+      <h1>
+        Hi testuser 
+      </h1>
+      <h3>
+        <span />
+        <span
+          class="ityped-cursor"
+        >
+          |
+        </span>
+      </h3>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot when logged out 1`] = `
+<DocumentFragment>
+  <div
+    class="Homepage container-fluid"
+  >
+    <div
+      class="wrapper"
+    >
+      <h1>
+        Welcomt to Click To Eat App
+      </h1>
+      <h3>
+        <span />
+        <span
+          class="ityped-cursor"
+        >
+          |
+        </span>
+      </h3>
+    </div>
+  </div>
+</DocumentFragment>
+`;

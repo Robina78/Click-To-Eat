@@ -1,0 +1,31 @@
+.input-control {
+   width: 250px; 
+   height: 35px;  
+   border: 0.3px solid rgba(185, 180, 180, 0.5);
+
+}
+
+.btn.search-button {
+    background-color:red;
+    border: none;
+    color: white;
+    width: 50px;
+    height: 35px;        
+}
+
+.search-btn {
+    color: slateblue; 
+    font-size: 0.9rem;  
+    font-weight: 600; 
+    height: 35px; 
+    align-items: center;
+}
+
+.react-mapbox-ac-input {
+  width: 250px; 
+  height: 35px;  
+  text-align: center; 
+  border: 0.3px solid rgba(185, 180, 180, 0.5);
+}
+   
+  

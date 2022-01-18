@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="LoginForm mt-5 container"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="text-center mt-3 p-4 col"
+      >
+        <img
+          alt="icon"
+          class="icon-img"
+          src="user.svg"
+        />
+        <form>
+          <div
+            class="form-group"
+          >
+            <input
+              autocomplete="username"
+              class="form-control mb-4"
+              name="username"
+              placeholder="Enter username"
+              required=""
+              value=""
+            />
+          </div>
+          <div>
+            <input
+              autocomplete="current-password"
+              class=" form-control mb-4"
+              name="password"
+              placeholder="Password"
+              required=""
+              type="password"
+              value=""
+            />
+          </div>
+          <button
+            class="btn btn-primary"
+          >
+            Login
+          </button>
+        </form>
+        <div
+          class="text-center"
+        >
+          <p
+            class="mt-4"
+          >
+            Don't have an account?
+          </p>
+          <a
+            class="link-sign"
+            href="/signup"
+          >
+            SIGN UP NOW
+          </a>
+        </div>
+      </div>
+      <div
+        class="col-lg-8 col-md-6 col-sm-12"
+      >
+        <img
+          class="w-100"
+          src="login.svg"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

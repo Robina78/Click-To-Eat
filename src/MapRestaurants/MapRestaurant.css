@@ -1,0 +1,54 @@
+.card-map {
+    max-width: 14rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.star {
+    font-size: 13px;
+}
+
+.place {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+ }
+
+.card-Img {
+    margin-top: 20px;
+    width: 10rem;
+    height: 8rem;
+} 
+
+.postForm {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.postInput {
+    border: none;
+    border-bottom: 1px solid slateblue;
+}
+
+input::placeholder, textarea::placeholder {
+    font-size: 12px;
+    color: rgb(196, 192, 192);
+}
+
+.submitButton{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
