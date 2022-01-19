@@ -9,7 +9,7 @@ const {
     BadRequestError,    
 } = require("../expressError");
 
-const BCRYPT_WORK_FACTOR = 10;
+const { BCRYPT_WORK_FACTOR } = require("../config");
 
 class User {
     /** authenticate user with username, password.
