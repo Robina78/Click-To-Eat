@@ -9,7 +9,7 @@ const {
     BadRequestError,    
 } = require("../expressError");
 
-const { BCRYPT_WORK_FACTOR } = require("../config");
+const BCRYPT_WORK_FACTOR = 10;
 
 class User {
     /** authenticate user with username, password.
@@ -66,7 +66,7 @@ class User {
             if (duplicateCheck.rows[0]) {
                 throw new BadRequestError(`Duplicate username: ${username}`);
             }
-            const hashedPassword = await bcrypt.hash(password, 10);            
+            const hashedPassword = await bcrypt.hash(password, BCRYPT_WORK_FACTOR);            
             
             const result = await db.query(
                 `INSERT INTO users (username,
