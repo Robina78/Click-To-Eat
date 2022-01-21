@@ -18,6 +18,7 @@
     "cors": "^2.8.5",
     "element-react": "^1.4.34",
     "ityped": "^1.0.3",
+    "jsonschema": "^1.4.0",
     "jsonwebtoken": "^8.5.1",
     "link-react": "^3.0.0",
     "nodemon": "^2.0.15",
@@ -36,7 +37,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"cd server && nodemon server\"",
+    "start": "concurrently \"react-scripts start\" \"cd server && npm install && node server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
