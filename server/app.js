@@ -1,7 +1,7 @@
 "use strict";
 
 const express = require('express');
-// const cors = require("cors");
+const cors = require("cors");
 
 const { NotFoundError } = require("./expressError");
 
@@ -13,7 +13,7 @@ const restaurantRoutes = require('./routes/restaurant');
 
 const app = express();
 const path = require("path");
-// app.use(cors());
+app.use(cors());
 app.use(express.json());
 app.use(authenticateJWT);
 
@@ -42,8 +42,11 @@ app.use(function (err, req, res, next) {
 
 //This will create a middleware.
 //When you navigate to the root page, it would use the built react-app
-const buildPath = path.join(__dirname, '..', 'build');
-app.use(express.static(buildPath));
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+});
 
 
 module.exports = app;

@@ -36,11 +36,10 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start-client": "react-scripts start",
-    "build": "react-scripts build && (cd server && npm install)",
+    "start": "concurrently \"react-scripts start\" \"cd server && nodemon server\"",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start": "cd server && npm start"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
