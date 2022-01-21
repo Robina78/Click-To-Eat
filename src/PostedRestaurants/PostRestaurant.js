@@ -190,7 +190,23 @@ export default function PostRestaurant() {
                     }}
                     onClick={() => handleMarkerClick(pin.id, pin.latitude, pin.longitude)}                     
                 />
-                </Marker>  
+                </Marker>
+
+                <Popup
+                    key={pin.id}
+                    latitude={pin.latitude}
+                    longitude={pin.longitude}
+                    closeButton={true}
+                    closeOnClick={false}                
+                    anchor="left"
+                    onClose={() => setNewPlace(null)}
+                >
+                    <div className="card-map">
+                        <h4 className='place'>{pin.name}</h4>
+                                            
+                         <div>{pin.street} {pin.city} {pin.state} {pin.zipCode}</div>                         
+                    </div>
+                </Popup>      
               </>
            ))}                  
 
