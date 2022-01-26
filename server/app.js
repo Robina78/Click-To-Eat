@@ -41,10 +41,10 @@ app.use(function (err, req, res, next) {
 
 //This will create a middleware.
 //When you navigate to the root page, it would use the built react-app
-app.use(express.static(path.join(__dirname, "/client/build")));
+app.use(express.static(path.join(__dirname, "/build")));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '/build', 'index.html'));
 });
 
 
