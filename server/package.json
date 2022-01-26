@@ -9,8 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "jest -i",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "test": "jest -i"
   },
   "author": "Ruby.H",
   "license": "ISC",
