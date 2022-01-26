@@ -6,7 +6,6 @@ export const searchSlice = createSlice({
         term: "",
         location: "",
     },
-
     reducers: {
         update: (state, action) => {
             state.term = action.payload.term;

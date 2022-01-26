@@ -7,7 +7,7 @@ const {
   ensureLoggedIn,
   ensureAdmin,
   ensureCorrectUserOrAdmin,
-} = require("./auth");
+} = require("../middleware/auth");
 
 const { SECRET_KEY } = require("../config");
 const testJwt = jwt.sign({ username: "test", isAdmin: false }, SECRET_KEY);
@@ -76,19 +76,7 @@ describe("ensureLoggedIn", function () {
         };
         ensureLoggedIn(req, res, next);
     });
-});
-
-describe("ensureAdmin", function() {
-    test("works", function () {
-        expect.assertions(1);
-        const req = {};
-        const res = { locals: { user: { username: "test", isAdmin: true } } };
-        const next = function(err) {
-            expect(err).toBeFalsy();
-        };
-        ensureAdmin(req, res, next);
-    });
-    
+  
     test("unauth if not admin", function () {
         expect.assertions(1);
         const req = {};
@@ -111,15 +99,6 @@ describe("ensureAdmin", function() {
 });
 
 describe("ensureCorrectUserOrAdmin", function () {
-    test("works: admin", function () {
-      expect.assertions(1);
-      const req = { params: { username: "test" } };
-      const res = { locals: { user: { username: "admin", isAdmin: true } } };
-      const next = function (err) {
-        expect(err).toBeFalsy();
-      };
-      ensureCorrectUserOrAdmin(req, res, next);
-    });
   
     test("works: same user", function () {
       expect.assertions(1);

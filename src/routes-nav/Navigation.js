@@ -5,14 +5,12 @@ import logo from "../assets/click1.png"
 import "./Navigation.css";
 import SearchBar from '../SearchBar/SearchBar';
 
-
 /** Navigation bar for site, shows up on every page
  * 
  * When user is logged in, shows to main areas of site. 
  * When not, shows link to Login and signup forms.
  * Rendered by App.
  */
-
 export default function Navigation({ logout }) {
     const { currentUser } = useContext(UserContext);      
     // console.debug("Navigation", "currentUser=", currentUser);

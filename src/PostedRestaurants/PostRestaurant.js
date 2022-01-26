@@ -4,7 +4,7 @@ import {Fastfood} from '@mui/icons-material';
 import UserContext from "../auth/UserContext";
 import { Container } from "react-bootstrap";
 import UserApi from '../api/api';
-import ItypedRes from './ItypedRes';
+import AnimatedTyping from './AnimatedTyping';
 
 export default function PostRestaurant() {
     const { currentUser } = useContext(UserContext);
@@ -91,7 +91,7 @@ export default function PostRestaurant() {
 
     return (
         <Container fluid>
-            <ItypedRes />
+            <AnimatedTyping />
             <ReactMapGl 
                 {...viewport} 
                 mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}

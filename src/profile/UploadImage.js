@@ -20,13 +20,12 @@ export default function UploadImage() {
             setPreview(null);
         }
     },[image])
-   
 
     return (
         <div>
            <form>
                <div className='uploadImg'>
-               <img src={preview ? preview : userIcon} className='rounded-circle mt-4' style={{maxWidth:'300px', maxHeight:'300px'}} alt="profile icon" />
+               <img src={preview ? preview : userIcon} className='rounded-circle mt-4' alt="profile icon" />
                <button 
                     className='changeImgBtn'
                     onClick={(event) => {
@@ -39,7 +38,7 @@ export default function UploadImage() {
                 <input 
                     type="file"
                     ref={fileInputRef}
-                    style={{display:"none"}}
+                    className='fileInput'
                     accept='image/*'
                     onChange={(event) => {
                         const file = event.target.files[0];

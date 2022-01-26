@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import { init } from 'ityped';
 
 
-export default function ItypedRes() {
+export default function AnimatedTyping() {
     const textRef = useRef();
 
     useEffect(() => {

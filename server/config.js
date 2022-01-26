@@ -5,7 +5,7 @@
 require("dotenv").config();
 
 const SECRET_KEY = process.env.SECRET_KEY ;
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4004;
 const BASE_YELP_URL = process.env.BASE_YELP_URL;
 const YELP_API_KEY = process.env.YELP_API_KEY; 
 

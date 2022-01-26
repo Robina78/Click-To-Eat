@@ -1,9 +1,8 @@
 "use strict";
 
-const { italic } = require("colors");
 const db = require("../db.js");
 const { BadRequestError, NotFoundError } = require("../expressError");
-const Restaurant = require("./restaurant.js");
+const Restaurant = require("../models/restaurant.js");
 
 const {
   commonBeforeAll,
@@ -11,7 +10,7 @@ const {
   commonAfterEach,
   commonAfterAll,
   testRestaurantId,
-} = require("./_testCommon");
+} = require("./_modelTestCommon");
 
 beforeAll(commonBeforeAll);
 beforeEach(commonBeforeEach);

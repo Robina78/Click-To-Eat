@@ -6,14 +6,14 @@ const {
   UnauthorizedError,
 } = require("../expressError");
 const db = require("../db.js");
-const User = require("./user.js");
+const User = require("../models/user");
 const {
   commonBeforeAll,
   commonBeforeEach,
   commonAfterEach,
   commonAfterAll,
-  testJobIds,
-} = require("./_testCommon");
+  testRestaurantId,
+} = require("./_modelTestCommon");
 
 
 beforeAll(commonBeforeAll);

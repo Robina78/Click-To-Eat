@@ -9,8 +9,6 @@ import PrivateRoute from './PrivateRoute';
 import PostRestaurant from '../PostedRestaurants/PostRestaurant';
 import RestaurantList from '../PostedRestaurants/RestaurantList';
 
-
-
 export default function PageRoutes({ login, signup}) {
     return (
         <div className="pageRoutes">
@@ -55,9 +53,7 @@ export default function PageRoutes({ login, signup}) {
                 />
 
                 <Route element={<Navigate to="/" />}/>                
-            </Routes>
-
-            
+            </Routes>            
         </div>
     )
 }

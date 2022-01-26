@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Alert from "./Alert";
-import { ExpandCircleDownTwoTone } from "@mui/icons-material";
+import Alert from "../common/Alert";
 
 it("render without craching", () => {
     render(<Alert />);

@@ -13,7 +13,7 @@ export default function Homepage() {
             showCursor: true,
             backDelay:1500,
             backSpeed: 60, 
-            strings: ['Create an account','Login', 'Search Your Favorite Restaurant', 'Order Food', "Take at home"]
+            strings: ['Create an account','Login', 'Find Your Favorite Restaurant', 'Order Food', "Take at home"]
         });
     }, [])
 

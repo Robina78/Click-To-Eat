@@ -42,10 +42,14 @@
     align-items: center;
 }
 .rounded-circle{      
-    width: 230px;
-    height: 230px;
+    width: 300px;
+    height: 300px;
 }
 
 .profileIcon {
     margin-top: -180px;
+}
+
+.fileInput {
+    display: none;
 }

@@ -66,6 +66,7 @@ exports[`matches snapshot 1`] = `
         class="col-lg-8 col-md-6 col-sm-12"
       >
         <img
+          alt="login Image"
           class="w-100"
           src="login.svg"
         />
