@@ -1,9 +1,8 @@
 "use strict";
 
 /** Convenience middleware to handle common auth cases in routes. */
-
 const jwt = require("jsonwebtoken");
-const { SECRET_KEY } = require("../config");
+require("dotenv").config();
 const { UnauthorizedError } = require("../expressError");
 
 
@@ -20,7 +19,7 @@ function authenticateJWT(req, res, next) {
     const authHeader = req.headers && req.headers.authorization;
     if (authHeader) {
       const token = authHeader.replace(/^[Bb]earer /, "").trim();
-      res.locals.user = jwt.verify(token, SECRET_KEY);
+      res.locals.user = jwt.verify(token, process.env.SECRET_KEY);
     }
     return next();
   } catch (err) {

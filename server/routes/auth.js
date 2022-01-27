@@ -3,7 +3,6 @@
 /** Routes for authentication. */
 
 const jsonschema = require("jsonschema");
-
 const User = require("../models/user");
 const express = require("express");
 const router = express.Router();
@@ -57,7 +56,6 @@ router.post("/register", async function (req, res, next) {
     
     
     const newUser = await User.register({ ...req.body, isAdmin:false });
-      console.log( "Admin User:", newUser)
     const token = createToken(newUser);
    
     return res.status(201).json({ token });

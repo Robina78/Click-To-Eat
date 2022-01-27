@@ -2,22 +2,25 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
-  "engines": {
-    "node": "14.17.3",
-    "npm": "6.14.13"
-  },
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "jest -i"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robina78/click-to-eat2.git"
   },
   "author": "Ruby.H",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Robina78/click-to-eat2/issues"
+  },
+  "homepage": "https://github.com/Robina78/click-to-eat2#readme",
   "dependencies": {
-    "axios": "^0.24.0",
+    "axios": "^0.25.0",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
+    "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "jsonschema": "^1.4.0",
     "jsonwebtoken": "^8.5.1",
@@ -26,8 +29,5 @@
     "pg": "^8.7.1",
     "query-string": "^7.1.0",
     "supertest": "^6.2.2"
-  },
-  "devDependencies": {
-    "kill-port": "^1.6.1"
   }
 }

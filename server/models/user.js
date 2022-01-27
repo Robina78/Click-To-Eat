@@ -8,8 +8,7 @@ const {
     UnauthorizedError,
     BadRequestError,    
 } = require("../expressError");
-
-const BCRYPT_WORK_FACTOR = 10;
+require("dotenv").config();
 
 class User {
     /** authenticate user with username, password.
@@ -66,7 +65,7 @@ class User {
             if (duplicateCheck.rows[0]) {
                 throw new BadRequestError(`Duplicate username: ${username}`);
             }
-            const hashedPassword = await bcrypt.hash(password, BCRYPT_WORK_FACTOR);            
+            const hashedPassword = await bcrypt.hash(password, process.env.BCRYPT_WORK_FACTOR);            
             
             const result = await db.query(
                 `INSERT INTO users (username,
@@ -154,7 +153,7 @@ class User {
 
     static async update(username, data) {
         if (data.password) {
-            data.password = await bcrypt.hash(data.password, BCRYPT_WORK_FACTOR);
+            data.password = await bcrypt.hash(data.password, process.env.BCRYPT_WORK_FACTOR);
         }
 
         const {setCols, values } = sqlForPartialUpdate(
@@ -187,19 +186,6 @@ class User {
         return user;
     }
 
-
-    static async remove(username) {
-        let result = await db.query(
-              `DELETE
-               FROM users
-               WHERE username = $1
-               RETURNING username`,
-            [username],
-        );
-        const user = result.rows[0];
-    
-        if (!user) throw new NotFoundError(`No user: ${username}`);
-      }
     
 }
 
