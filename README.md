@@ -51,6 +51,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
     - React-Redux
     - React-bootstrap
     - bootstrap
+    - Axios
     
 - Backend 
     - Node.js
