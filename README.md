@@ -1,5 +1,5 @@
 ## App Link
-[cick-to-eat](https://click-client.herokuapp.com/)
+[click-to-eat](https://click-client.herokuapp.com/)
 
 ## Description
 Click To Eat app is a food delivery platform that makes getting great food from your favorite local restaurants. This app connects you with a broad range of restaurants and food, so you can order from the full menus of your favorites food whenever you want.
