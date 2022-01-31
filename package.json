@@ -38,7 +38,7 @@
     "webpack-parts": "^2.0.0"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"cd server && node server.js\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
