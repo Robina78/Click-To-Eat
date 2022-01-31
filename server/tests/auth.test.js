@@ -1,5 +1,5 @@
 "use strict";
-
+require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const { UnauthorizedError } = require("../expressError");
 const {
@@ -9,7 +9,7 @@ const {
   ensureCorrectUserOrAdmin,
 } = require("../middleware/auth");
 
-const { SECRET_KEY } = require("../config");
+const SECRET_KEY = process.env.SECRET_KEY;
 const testJwt = jwt.sign({ username: "test", isAdmin: false }, SECRET_KEY);
 const badJwt = jwt.sign({ username: "test", isAdmin: false }, "wrong");
 

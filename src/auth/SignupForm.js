@@ -18,13 +18,6 @@ export default function SignupForm({ signup }) {
     const [formData, setFormData] = useState(INITIAL);    
     const [formErrors, setFormErrors] = useState([]);
     
-  //   console.debug(
-  //     "SignupForm",
-  //     "signup=", typeof signup,
-  //     "formData=", formData,
-  //     "formErrors=", formErrors,
-  // );
-    
     async function handleSubmit(evt) {
         evt.preventDefault();
         let result = await signup(formData);

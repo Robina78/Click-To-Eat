@@ -42,18 +42,4 @@ app.use(function (err, req, res, next) {
 });
 
 
-//This will create a middleware.
-//When you navigate to the root page, it would use the built react-app
-// app.use(express.static(path.join(__dirname, "/client/build")));
-
-// if (process.env.NODE_ENV === 'production') {
-//     // Serve any static files
-//     app.use(express.static('client/build'));
-//   // Handle React routing, return all requests to React app
-//     app.get('*', function(req, res) {
-//       res.sendFile(path.resolve(__dirname, 'client/build', 'index.html'));
-//     });
-//   }
-
-
 module.exports = app;

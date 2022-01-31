@@ -4,7 +4,7 @@
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const { UnauthorizedError } = require("../expressError");
-
+ const SECRET_KEY = process.env.SECRET_KEY;
 
 /** Middleware: Authenticate user.
  *
@@ -19,7 +19,7 @@ function authenticateJWT(req, res, next) {
     const authHeader = req.headers && req.headers.authorization;
     if (authHeader) {
       const token = authHeader.replace(/^[Bb]earer /, "").trim();
-      res.locals.user = jwt.verify(token, process.env.SECRET_KEY);
+      res.locals.user = jwt.verify(token, SECRET_KEY);
     }
     return next();
   } catch (err) {

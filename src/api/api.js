@@ -3,7 +3,8 @@ import axios from "axios";
 /** API Class.
  * 
  * Static class tying toghether used to get/send to the API.
- * There shouldn't be any frontend-spicific stuff here, and there shouldn't be any API-aware stuff elsewhere in the frontend.
+ * There shouldn't be any frontend-spicific stuff here, and there shouldn't be any API-aware stuff 
+ * elsewhere in the frontend.
  * 
  */
 

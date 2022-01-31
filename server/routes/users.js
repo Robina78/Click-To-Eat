@@ -62,13 +62,7 @@ router.get("/", ensureAdmin, async function (req, res, next) {
 });
 
 
-/** GET /[username] => { user }
- *
- * Returns { username, firstName, lastName, isAdmin, jobs }
- *   where jobs is { id, title, companyHandle, companyName, state }
- *
- * Authorization required: admin or same user-as-:username
- **/
+/** GET /[username] => { user }*/
 
 router.get("/:username", ensureCorrectUserOrAdmin, async function (req, res, next) {
   try {

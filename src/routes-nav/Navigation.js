@@ -63,8 +63,8 @@ export default function Navigation({ logout }) {
                 <Navbar.Toggle />
                 <Navbar.Collapse>
                     <Nav className='ms-auto'>                                                
-                        <Nav.Link href="login" style={{color: "slateblue", fontSize:"18px", fontWeight:"700"}}>Login</Nav.Link>
-                        <Nav.Link href="signup" style={{color: "slateblue", fontSize:"18px", fontWeight:"700"}}>Signup</Nav.Link>
+                        <Nav.Link href="login" className="outLog">Login</Nav.Link>
+                        <Nav.Link href="signup" className="outLog">Signup</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>          

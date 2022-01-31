@@ -91,7 +91,7 @@ describe("register", function () {
       });
       fail();
     } catch (err) {
-      expect(err instanceof BadRequestError).toBeTruthy();
+      expect(err instanceof BadRequestError).toBeTruthy;
     }
   });
 });

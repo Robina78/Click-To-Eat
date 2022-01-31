@@ -1,10 +1,11 @@
 const bcrypt = require("bcrypt");
 const db = require("../db.js");
-const { BCRYPT_WORK_FACTOR } = require("../config");
+const BCRYPT_WORK_FACTOR = 1
 
 const testRestaurantId = [];
 
 async function commonBeforeAll() {
+  jest.setTimeout(90 * 1000)
   // noinspection SqlWithoutWhere
   await db.query("DELETE FROM restaurants");
   // noinspection SqlWithoutWhere
@@ -38,9 +39,11 @@ async function commonBeforeEach() {
 
 async function commonAfterEach() {
   await db.query("ROLLBACK");
+  jest.setTimeout(30000);
 }
 
 async function commonAfterAll() {
+  jest.setTimeout(30000)
   await db.end();
 }
 

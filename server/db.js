@@ -1,29 +1,20 @@
 "use strict";
 /** Database setup for click-to-eat */
-const { Client } = require("pg");
+const Pool = require("pg").Pool;
 require("dotenv").config();
-let db;
 
-// Use dev database, testing database, or via env var, production database
-function getDatabaseUri() {
-    return (process.env.NODE_ENV === "test")
-        ? process.env.DATABAS_TEST_URI
-        : process.env.DATABASE_URI; 
-}
+const devConfig = `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.
+PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}`
 
-if(process.env.NODE_ENV === "production") {
-    db = new Client({
-        connectionString: getDatabaseUri(),
-        ssl: {
-            rejectUnauthorized: false
-        }
-    });
-} else {
-    db = new Client({
-        connectionString: getDatabaseUri()
-    });
-}
+const proConfig = process.env.DATABASE_URL  //heroku addons
 
+
+const db = new Pool({
+    connectionString: process.env.NODE_ENV === "production" ? proConfig : devConfig,
+    // ssl: {
+    //     rejectUnauthorized: false
+    //   }
+});
 db.connect();
 
 module.exports = db;

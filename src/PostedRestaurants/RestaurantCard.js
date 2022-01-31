@@ -6,7 +6,7 @@ import { restaurantsImg } from './RestaurantImage';
 import UserApi from '../api/api';
 
 
-export default function RestaurantCard({restaurant, key}) {
+export default function RestaurantCard({restaurant}) {
   const random = Math.floor(Math.random() * restaurantsImg.length);
   const randomImg = restaurantsImg[random]
   const { currentUser } = useContext(UserContext);

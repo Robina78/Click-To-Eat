@@ -65,7 +65,7 @@ class User {
             if (duplicateCheck.rows[0]) {
                 throw new BadRequestError(`Duplicate username: ${username}`);
             }
-            const hashedPassword = await bcrypt.hash(password, process.env.BCRYPT_WORK_FACTOR);            
+            const hashedPassword = await bcrypt.hash(password, 10);            
             
             const result = await db.query(
                 `INSERT INTO users (username,
@@ -153,7 +153,7 @@ class User {
 
     static async update(username, data) {
         if (data.password) {
-            data.password = await bcrypt.hash(data.password, process.env.BCRYPT_WORK_FACTOR);
+            data.password = await bcrypt.hash(data.password, 10);
         }
 
         const {setCols, values } = sqlForPartialUpdate(

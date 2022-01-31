@@ -34,7 +34,7 @@ export default function RestaurantList() {
                  <div className="RestaurantList-list">
                    {restaurants.map((restaurant) => (
                        currentUser.username === restaurant.username 
-                       ? (<RestaurantCard  key={restaurant.id} restaurant={restaurant}/>) 
+                       ? (<RestaurantCard restaurant={restaurant}/>) 
                        : (<div></div>)
                    ))}
                  </div>
