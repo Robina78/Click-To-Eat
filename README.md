@@ -26,8 +26,8 @@ Click To Eat app is a food delivery platform that makes getting great food from 
 - `npm start`
 
 ## Test App
-### `npm test client/src/tests`
-### `jest -i server/tests`
+# `npm test client/src/tests`
+# `jest -i server/tests`
 
 
 
