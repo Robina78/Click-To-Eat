@@ -7,10 +7,12 @@ Click To Eat app is a food delivery platform that makes getting great food from 
 ## Features
 - Access to the app as a user
 - View available restaurants by searching the restaurant's name and location
+- Sort restaurants list with delivery or pickup services
 - Location search input have used the mapbox autocomplete api
-- Order your favorites food on your favorites local restauran
-- Post new restaurant by create a pin on map and shows list of all posted restaurant
+- Order your favorites food on your favorites local restaurant
+- Post new restaurant by create a pin on map and show list of all posted restaurant
 - Delete posted restaurant
+- Edit posted restaurant
 - Edit user's profile
 
 ## Installation
